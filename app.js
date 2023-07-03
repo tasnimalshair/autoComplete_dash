@@ -10,8 +10,8 @@ const app = (req, res) => {
       if (!searchedCountry) {
         res.end("Bad request");
       } else {
-        const similarCountries = countries.filter((word) =>
-          word.toLowerCase().includes(searchedCountry.toLowerCase())
+        const similarCountries = countries.filter((country) =>
+          country.toLowerCase().includes(searchedCountry.toLowerCase())
         );
 
         res.end(JSON.stringify(similarCountries));
